@@ -1,0 +1,20 @@
+BoxLayout:
+	orientation:"vertical"
+	TextInput:
+		id: txt
+		text:"Enter"
+		multiline:False
+		on_text_validate:
+			lbl.text = self.text
+	Label:
+		id: lbl
+		text:""
+		font_size:40
+		color:1,0,0,1
+	Button:
+		id: btn
+		text:"Change Label Color"
+		on_press:
+			if str(lbl.color) == str([1,0,0,1]): lbl.color= [0,1,0,1]
+			elif str(lbl.color) == str([0,1,0,1]): lbl.color=[0,0,1,1]
+			else: lbl.color = [1,0,0,1]

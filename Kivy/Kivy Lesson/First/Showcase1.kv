@@ -1,0 +1,20 @@
+Showcase:
+
+<Showcase>:
+	orientation:"horizontal"
+	ImageWithCaption:
+		source:'img.station.jpg'
+	ImageWithCaption:
+		source:'img.cathedral.jpg'
+	ImageWithCaption:
+		source:'img.cape.jpg'
+
+<ImageWithCaption>:
+	source:None
+	orientation:"vertical"
+	Image:
+		source: root.source
+	Label:
+		text: str(root.source)
+		size_hint_y: None
+		height: 30

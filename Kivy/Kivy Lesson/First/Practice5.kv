@@ -1,0 +1,20 @@
+BoxLayout:
+	orientation:"vertical"
+	Image:
+		id:img
+		source:"img.station.jpg"
+	BoxLayout:
+		orientation:"horizontal"
+		size_hint_y:0.2
+		Button:
+			text:"station"
+			on_press:
+				img.source = "img.station.jpg"
+		Button:
+			text:"cathedral"
+			on_press:
+				img.source = "img.cathedral.jpg"
+		Button:
+			text:"cape"
+			on_press:
+				img.source = "img.cape.jpg"

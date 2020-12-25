@@ -1,0 +1,20 @@
+MyRoot:
+
+<MyRoot@BoxLayout>
+	orientation:"horizontal"
+	ImageAndText:
+		source:'img.station.jpg'
+	ImageAndText:
+		source:'img.cathedral.jpg'
+	ImageAndText:
+		source:'img.cape.jpg'
+
+<ImageAndText@BoxLayout>
+	source:None
+	orientation:"vertical"
+	Image:
+		source:root.source
+	Label:
+		text:str(root.source)
+		size_hint_y:None
+		height: 30

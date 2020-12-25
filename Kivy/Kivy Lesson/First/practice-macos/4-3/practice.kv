@@ -1,0 +1,38 @@
+BoxLayout:
+   orientation: 'vertical'
+   Label:
+      font_size: 48
+      size_hint_y: 10
+      text: str(box.value)
+   BoxLayout:
+      id: box
+      value: 0
+      on_value:
+         self.value = self.value%10000000
+      MyButton:
+         value: 0
+      MyButton:
+         value: 1
+      MyButton:
+         value: 2
+      MyButton:
+         value: 3
+      MyButton:
+         value: 4
+      MyButton:
+         value: 5
+      MyButton:
+         value: 6
+      MyButton:
+         value: 7
+      MyButton:
+         value: 8
+      MyButton:
+         value: 9
+
+<MyButton@Button>:
+   font_size: 32
+   value: 0
+   text: str(self.value)
+   on_press:
+      self.parent.value = self.parent.value*10 + self.value

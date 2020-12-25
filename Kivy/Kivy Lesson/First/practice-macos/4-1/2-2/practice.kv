@@ -1,0 +1,9 @@
+BoxLayout:
+   MyButton:
+   MyButton:
+
+<MyButton@Button>:
+   font_size: 36
+   text: '('+str(self.size_hint_x)+')'
+   on_press:
+      self.size_hint_x += 0.1

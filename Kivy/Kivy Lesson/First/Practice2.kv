@@ -1,0 +1,13 @@
+MyRoot:
+
+<MyRoot@FloatLayout>:
+	MyButton:
+		pos_hint:{"center_x":0.3,"center_y":0.5}
+	MyButton:
+		pos_hint:{"center_x":0.7,"center_y":0.5}
+<MyButton@Button>:
+	size_hint_x : 0.2
+	size_hint_y : 0.2
+	on_press:
+		self.size_hint_x *= 1.02
+		self.size_hint_y *= 1.02

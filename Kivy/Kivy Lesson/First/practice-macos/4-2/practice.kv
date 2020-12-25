@@ -1,0 +1,18 @@
+BoxLayout:
+   orientation: 'vertical'
+   Image:
+      size_hint_y: 9
+      source: box.source
+   BoxLayout:
+      id: box
+      source: ''
+      ImgButton:
+         text: 'station'
+      ImgButton:
+         text: 'cathedral'
+      ImgButton:
+         text: 'cape'
+
+<ImgButton@Button>:
+   on_press:
+      self.parent.source = 'img.'+self.text+'.jpg'

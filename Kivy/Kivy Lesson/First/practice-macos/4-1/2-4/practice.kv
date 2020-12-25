@@ -1,0 +1,21 @@
+BoxLayout:
+   orientation: 'vertical'
+   TextInput:
+      font_size: 28
+      multiline: False
+      on_text_validate:
+         lbl.text = self.text
+   Label:
+      id: lbl
+      size_hint_y: 5
+      font_size: 28
+   Button:
+      size_hint_y: 5
+      font_size: 28
+      counter: 0
+      text: 'Change the text color'
+      on_press:
+         self.counter += 1
+         if self.counter%3 == 0: lbl.color = (1,1,1,1)
+         elif self.counter%3 == 1: lbl.color = (0,0,1,1)
+         else: lbl.color = (1,0,0,1)

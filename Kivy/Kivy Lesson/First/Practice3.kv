@@ -1,0 +1,15 @@
+BoxLayout:
+	orientation:"horizontal"
+	MyButton:
+		text:"1st"
+		size_hint_x:1
+	MyButton:
+		text:"2nd"
+		size_hint_x:3
+	MyButton:
+		text:"3rd"
+		size_hint:[2,0.5]
+
+<MyButton@Button>
+	on_press:
+		self.parent.remove_widget(self)

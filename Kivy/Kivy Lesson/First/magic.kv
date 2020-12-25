@@ -1,0 +1,55 @@
+# -*- coding: utf-8 -*-
+Root:
+<Root>:
+	canvas.before:
+		Color:
+			rgb: 1,1,1
+		Rectangle:
+			pos: self.pos
+			size: self.size
+<Title@BoxLayout>:
+	orientation: "vertical"
+	Label:
+		size_hint_y:3
+		text: "魔法陣パズル"
+	GoToButton:
+		no: 1
+	GoToButton:
+		no: 2
+	GoToButton:
+		no: 3
+<GotoButton@Button>:
+	no: 0
+	text: "問題" + str(self.no)
+	on_press: app.root.gotoBoard(self.no)
+<Board>:
+	no: 0
+	orientation: "vertical"
+	Label:
+		text: "問題" + str(root.no)
+	GridLayout:
+		id: board
+		rows: 4
+		cols: 4
+		size_hint_y: 4
+		spacing: 3
+	BoxLayout:
+		orientaiton: "horizontal"
+		Button:
+			text: "もどる"
+			on_press: app.root.gotoTitle()
+		Button:
+			text: "チェック"
+			on_press: app.root.board.check()
+<Const@Label>:
+
+<NumInput@TextInput>:
+
+<CheckView@ModalView>:
+
+<Label>:
+	color: 0.5,0.25,0.25,1
+	font_size: 32
+<Button>:
+	color: 1,1,1,1
+	font_size: 24
