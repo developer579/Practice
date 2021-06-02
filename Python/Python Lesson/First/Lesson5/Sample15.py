@@ -1,0 +1,13 @@
+sale = [80,60,22,50,75]
+print("現在のデータは",sale,"です。")
+print("最大のデータは",max(sale),"です。")
+print("最小のデータは",min(sale),"です。")
+print("データの合計は",sum(sale),"です。")
+print("昇順でソートされたデータは",sorted(sale),"です。")
+print("降順でソートされたデータは",sorted(sale,reverse=True))
+sale.sort(reverse=False)
+print("sale.sort(reverse=False)で表示します。")
+print(sale)
+sale.sort(reverse=True)
+print("sale.sort(reverse=True)で表示します。")
+print(sale)

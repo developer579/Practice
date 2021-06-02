@@ -1,0 +1,7 @@
+age = int(input("あなたは何才ですか？"))
+print("あなたは",age,"才です。")
+print()
+h = float(input("身長を入力してください。"))
+w = float(input("体重を入力してください。"))
+print("身長は",h,"センチです。")
+print("体重は",w,"キロです。")
